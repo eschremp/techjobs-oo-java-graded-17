@@ -1,6 +1,5 @@
 package org.launchcode.techjobs.oo;
 
-import java.nio.file.SecureDirectoryStream;
 import java.util.Objects;
 
 public class Job {
@@ -46,25 +45,27 @@ public class Job {
             nameString = "Name: "+ noData + "\n";
             missingData++;
         }
-        if (!(getEmployer().getValue().isEmpty()) && !(getEmployer().getValue() == null)) {
+
+        if (!(getEmployer().getValue().isBlank())) {
             employerString = "Employer: " + getEmployer() + "\n";
         } else {
             employerString = "Employer: "+ noData + "\n";
             missingData++;
         }
-        if (!(getLocation().getValue().isEmpty()) && !(getLocation().getValue() == null)) {
+
+        if (!(getLocation().getValue().isBlank())) {
             locationString = "Location: " + getLocation() + "\n";
         } else {
             locationString = "Location: "+ noData + "\n";
             missingData++;
         }
-        if (!(getPositionType().getValue().isEmpty()) && !(getPositionType().getValue() == null)) {
+        if (!(getPositionType().getValue().isEmpty())) {
             positionTypeString = "Position Type: " + getPositionType() + "\n";
         } else {
             positionTypeString = "Position Type: " + noData + "\n";
             missingData++;
         }
-        if (!(getCoreCompetency().getValue().isEmpty()) && !(getCoreCompetency().getValue() == null)) {
+        if (!(getCoreCompetency().getValue().isEmpty())) {
             coreCompencyString = "Core Competency: " + getCoreCompetency() + "\n";
         } else {
             coreCompencyString = "Core Competency: " + noData + "\n";
